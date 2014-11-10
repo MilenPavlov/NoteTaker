@@ -16,24 +16,11 @@ namespace NoteTaker
             var listView = new ListView
             {
                 ItemsSource = App.NoteFolder.Notes,
+                ItemTemplate = new DataTemplate(typeof(TextCell)),
                 VerticalOptions = LayoutOptions.FillAndExpand
             };
 
-            var button = new Button
-            {
-                Text = "Add new Note",
-                HorizontalOptions = LayoutOptions.Center,
-                //VerticalOptions = LayoutOptions.Center
-                            
-            };
-
-            button.Clicked += (sender, args) =>
-            {
-                var dateTime = DateTime.UtcNow;
-                string fileName = dateTime.ToString("yyyyMMddHHmmssfff") + ".note";
-                var note = new Note(fileName);
-                Navigation.PushAsync(new NotePage(note));
-            };
+            listView.ItemTemplate.SetBinding(TextCell.TextProperty, "Identifier");
 
             listView.ItemSelected += (sender, args) =>
             {
@@ -47,14 +34,25 @@ namespace NoteTaker
                 }
             };
 
-            Content = new StackLayout
-            {
-                Children =
-                {
-                    listView,
-                    button
-                }
-            };
+			var addNewItem = new ToolbarItem {
+				Name = "Add Note",
+				Icon = Device.OnPlatform ("new.png", 
+					"ic_action_new.png", 
+					"Images/add.png"),
+				Order = ToolbarItemOrder.Primary
+			};
+
+			addNewItem.Activated += (object sender, EventArgs e) => 
+			{
+				var dateTime = DateTime.UtcNow;
+				string fileName = dateTime.ToString("yyyyMMddHHmmssfff") + ".note";
+				var note = new Note(fileName);
+				Navigation.PushAsync(new NotePage(note));
+			};
+
+            ToolbarItems.Add(addNewItem);
+
+            Content = listView;
         }   
     }
 }

@@ -20,7 +20,13 @@ namespace NoteTaker
 
         public string Title
         {
-            set { SetProperty(ref title, value); }
+            set 
+            {
+                if(SetProperty(ref title, value))
+                {
+                    Identifier = MakeIdentifier();
+                }
+            }
             get { return title; }
         }
 
@@ -48,7 +54,13 @@ namespace NoteTaker
         }
         public string Text
         {
-            set { SetProperty(ref text, value); }
+            set
+            {
+                if (SetProperty(ref text, value) && String.IsNullOrWhiteSpace(Title))
+                {
+                    this.Identifier = MakeIdentifier();
+                }
+            }
             get { return text; }
         }
 

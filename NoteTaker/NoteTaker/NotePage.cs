@@ -48,13 +48,16 @@ namespace NoteTaker
 
             if (isNoteEdit)
             {
-                var cancelButton = new Button
+                var cancelItem = new ToolbarItem
                 {
-                    Text = "Cancel",
-                    HorizontalOptions = LayoutOptions.CenterAndExpand
+                    Name = "Cancel",
+                    Icon = Device.OnPlatform("cancel.png", 
+                                             "ic_action_cancel.png", 
+                                             "Images/cancel.png"), 
+                    Order = ToolbarItemOrder.Primary
                 };
 
-                cancelButton.Clicked += async (sender, args) =>
+                cancelItem.Activated += async (sender, args) =>
                 {
                     bool confirm = await DisplayAlert("Note Taker", "Cancel note edit?", "Yes", "No");
 
@@ -65,13 +68,17 @@ namespace NoteTaker
                     }
                 };
 
-                var deleteButton = new Button
+                ToolbarItems.Add(cancelItem);
+                var deleteItem = new ToolbarItem
                 {
-                    Text = "Delete",
-                    HorizontalOptions = LayoutOptions.CenterAndExpand
+                    Name = "Delete",
+                    Icon = Device.OnPlatform("discard.png",
+                                             "ic_action_discard.png",
+                                             "Images/delete.png"),
+                    Order = ToolbarItemOrder.Primary
                 };
 
-                deleteButton.Clicked += async (sender, args) =>
+                deleteItem.Activated += async (sender, args) =>
                 {
                     bool confirm = await DisplayAlert("Note Taker", "Delete this note?", "Yes", "No");
                     if (confirm)
@@ -82,17 +89,8 @@ namespace NoteTaker
                         await Navigation.PopAsync();
                     }
                 };
-
-                var horzStack = new StackLayout
-                {
-                    Orientation = StackOrientation.Horizontal,
-                    Children =
-                    {
-                        cancelButton, deleteButton
-                    }
-                };
-
-                stackLayout.Children.Add(horzStack);
+                
+                ToolbarItems.Add(deleteItem);              
             }
 
             Content = stackLayout;

@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
+# Visual Studio 2012
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteTaker", "NoteTaker\NoteTaker\NoteTaker.csproj", "{21E5892C-0115-4222-9A56-35B16306F16F}"
@@ -53,34 +53,6 @@ Global
 		{21E5892C-0115-4222-9A56-35B16306F16F}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{21E5892C-0115-4222-9A56-35B16306F16F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{21E5892C-0115-4222-9A56-35B16306F16F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Ad-Hoc|Any CPU.ActiveCfg = Ad-Hoc|iPhone
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Ad-Hoc|iPhoneSimulator
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Ad-Hoc|iPhoneSimulator.Build.0 = Ad-Hoc|iPhoneSimulator
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Ad-Hoc|Mixed Platforms.ActiveCfg = Ad-Hoc|iPhone
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Ad-Hoc|Mixed Platforms.Build.0 = Ad-Hoc|iPhone
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.AppStore|Any CPU.ActiveCfg = AppStore|iPhone
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.AppStore|iPhone.Build.0 = AppStore|iPhone
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.AppStore|iPhoneSimulator.ActiveCfg = AppStore|iPhoneSimulator
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.AppStore|Mixed Platforms.ActiveCfg = AppStore|iPhone
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.AppStore|Mixed Platforms.Build.0 = AppStore|iPhone
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Debug|Any CPU.ActiveCfg = Debug|iPhone
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Debug|iPhone.ActiveCfg = Debug|iPhone
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Debug|iPhone.Build.0 = Debug|iPhone
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Debug|Mixed Platforms.ActiveCfg = Debug|iPhone
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Debug|Mixed Platforms.Build.0 = Debug|iPhone
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Release|Any CPU.ActiveCfg = Release|iPhone
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Release|iPhone.ActiveCfg = Release|iPhone
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Release|iPhone.Build.0 = Release|iPhone
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Release|Mixed Platforms.ActiveCfg = Release|iPhone
-		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Release|Mixed Platforms.Build.0 = Release|iPhone
 		{B3724C96-9D3F-4256-A68A-A0D9C063D32D}.Ad-Hoc|Any CPU.ActiveCfg = Release|Any CPU
 		{B3724C96-9D3F-4256-A68A-A0D9C063D32D}.Ad-Hoc|Any CPU.Build.0 = Release|Any CPU
 		{B3724C96-9D3F-4256-A68A-A0D9C063D32D}.Ad-Hoc|Any CPU.Deploy.0 = Release|Any CPU
@@ -113,6 +85,37 @@ Global
 		{B3724C96-9D3F-4256-A68A-A0D9C063D32D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{B3724C96-9D3F-4256-A68A-A0D9C063D32D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{B3724C96-9D3F-4256-A68A-A0D9C063D32D}.Release|Mixed Platforms.Deploy.0 = Release|Any CPU
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Ad-Hoc|Any CPU.ActiveCfg = Ad-Hoc|iPhone
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Ad-Hoc|iPhoneSimulator
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Ad-Hoc|iPhoneSimulator.Build.0 = Ad-Hoc|iPhoneSimulator
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Ad-Hoc|Mixed Platforms.ActiveCfg = Ad-Hoc|iPhone
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Ad-Hoc|Mixed Platforms.Build.0 = Ad-Hoc|iPhone
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.AppStore|Any CPU.ActiveCfg = AppStore|iPhone
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.AppStore|iPhoneSimulator.ActiveCfg = AppStore|iPhoneSimulator
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.AppStore|Mixed Platforms.ActiveCfg = AppStore|iPhone
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.AppStore|Mixed Platforms.Build.0 = AppStore|iPhone
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Debug|Any CPU.ActiveCfg = Debug|iPhone
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Debug|iPhone.Build.0 = Debug|iPhone
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Debug|Mixed Platforms.ActiveCfg = Debug|iPhone
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Debug|Mixed Platforms.Build.0 = Debug|iPhone
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Release|Any CPU.ActiveCfg = Release|iPhone
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Release|iPhone.ActiveCfg = Release|iPhone
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Release|iPhone.Build.0 = Release|iPhone
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Release|Mixed Platforms.ActiveCfg = Release|iPhone
+		{E035B906-1DA3-404C-AFD7-49141E771EB7}.Release|Mixed Platforms.Build.0 = Release|iPhone
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = NoteTaker\NoteTaker\NoteTaker.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

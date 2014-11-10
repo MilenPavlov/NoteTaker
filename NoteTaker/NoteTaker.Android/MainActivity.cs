@@ -11,7 +11,7 @@ using Xamarin.Forms.Platform.Android;
 
 namespace NoteTaker.Droid
 {
-    [Activity(Label = "NoteTaker", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity(Label = "NoteTaker", MainLauncher = true, Icon = "@drawable/ic_action_share", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : AndroidActivity
     {
         protected override void OnCreate(Bundle bundle)
