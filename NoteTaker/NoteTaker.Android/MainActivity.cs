@@ -22,6 +22,18 @@ namespace NoteTaker.Droid
 
             SetPage(App.GetMainPage());
         }
+
+        protected override void OnPause()
+        {
+            Concrete.LifecycleHelper.OnPause();
+            base.OnPause();
+        }
+
+	    protected override void OnResume()
+	    {
+            Concrete.LifecycleHelper.OnResume();
+	        base.OnResume();
+	    }
     }
 }
 

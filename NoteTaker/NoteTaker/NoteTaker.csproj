@@ -38,6 +38,7 @@
     <Compile Include="FileHelper.cs" />
     <Compile Include="HomePage.cs" />
     <Compile Include="Interface\IFileHelper.cs" />
+    <Compile Include="Interface\ILifecycleHelper.cs" />
     <Compile Include="Note.cs" />
     <Compile Include="NoteFolder.cs" />
     <Compile Include="NotePage.cs" />
