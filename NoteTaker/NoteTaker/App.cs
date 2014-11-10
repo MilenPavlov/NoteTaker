@@ -11,6 +11,8 @@ namespace NoteTaker
     {
         static NoteFolder noteFolder = new NoteFolder();
 
+        internal static readonly string TransientFileName = "TransientData.save";
+
         internal static NoteFolder NoteFolder
         {
             get { return noteFolder; }

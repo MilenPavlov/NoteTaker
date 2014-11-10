@@ -1,21 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using NoteTaker.Interface;
 using Xamarin.Forms;
 
 namespace NoteTaker
 {
     public class NotePage : ContentPage
     {
-        private string _filename;
-        Note _note;
+        private Note _note;
         private bool _isNoteEdit;
+        private ILifecycleHelper helper = DependencyService.Get<ILifecycleHelper>();
 
         public NotePage(Note note, bool isNoteEdit = false)
         {
-            _note = note;        
+            _note = note;
             _isNoteEdit = isNoteEdit;
             Title = _isNoteEdit ? "Edit Note" : "New Note";
 
@@ -39,9 +37,9 @@ namespace NoteTaker
             {
                 Children =
                 {
-                    new Label { Text = "Title: "},
+                    new Label {Text = "Title: "},
                     entry,
-                    new Label { Text = "Note: "},
+                    new Label {Text = "Note: "},
                     editor
                 }
             };
@@ -51,9 +49,9 @@ namespace NoteTaker
                 var cancelItem = new ToolbarItem
                 {
                     Name = "Cancel",
-                    Icon = Device.OnPlatform("cancel.png", 
-                                             "ic_action_cancel.png", 
-                                             "Images/cancel.png"), 
+                    Icon = Device.OnPlatform("cancel.png",
+                        "ic_action_cancel.png",
+                        "Images/cancel.png"),
                     Order = ToolbarItemOrder.Primary
                 };
 
@@ -73,8 +71,8 @@ namespace NoteTaker
                 {
                     Name = "Delete",
                     Icon = Device.OnPlatform("discard.png",
-                                             "ic_action_discard.png",
-                                             "Images/delete.png"),
+                        "ic_action_discard.png",
+                        "Images/delete.png"),
                     Order = ToolbarItemOrder.Primary
                 };
 
@@ -89,17 +87,37 @@ namespace NoteTaker
                         await Navigation.PopAsync();
                     }
                 };
-                
-                ToolbarItems.Add(deleteItem);              
-            }
 
+                ToolbarItems.Add(deleteItem);
+            }
             Content = stackLayout;
         }
 
+        
+
+
         protected override void OnAppearing()
         {
+            helper.Suspending += OnSuspending;
+            helper.Resuming += OnResuming;
             base.OnAppearing();
         }
+
+        async void OnResuming()
+        {
+            if (await FileHelper.ExistsAsync(App.TransientFileName))
+            {
+                await FileHelper.DeleteFileAsync(App.TransientFileName);
+            }
+        }
+
+        void OnSuspending()
+        {
+            var str = _note.Filename + "\x1F" + _isNoteEdit.ToString() + "\x1F" + _note.Title + "\x1F" + _note.Text;
+            Task task = Task.Run(() => FileHelper.WriteTextAsync(App.TransientFileName, str));
+            task.Wait();
+        }
+
 
         protected async override void OnDisappearing()
         {
@@ -111,7 +129,6 @@ namespace NoteTaker
                     App.NoteFolder.Notes.Add(_note);
                 }
             }
-
             base.OnDisappearing();
         }
     }

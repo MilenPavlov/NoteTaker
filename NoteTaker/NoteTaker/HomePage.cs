@@ -53,6 +53,33 @@ namespace NoteTaker
             ToolbarItems.Add(addNewItem);
 
             Content = listView;
-        }   
+
+
+            CheckSavedInfo();
+        }
+
+        private async void CheckSavedInfo()
+        {
+            if (await FileHelper.ExistsAsync(App.TransientFileName))
+            {
+                string str = await FileHelper.ReadTextAsync(App.TransientFileName);
+
+                await FileHelper.DeleteFileAsync(App.TransientFileName);
+
+                string[] contents = str.Split('\x1F');
+                string filename = contents[0];
+                bool isNoteEdit = Boolean.Parse(contents[1]);
+                string entryText = contents[2];
+                string editorText = contents[3];
+
+                var note = new Note(filename);
+                note.Title = entryText;
+                note.Text = editorText;
+
+                var notePage = new NotePage(note, isNoteEdit);
+                await Navigation.PushAsync(notePage);
+
+            }
+        }
     }
 }
