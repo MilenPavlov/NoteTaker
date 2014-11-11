@@ -1,6 +1,5 @@
-﻿using System;
+﻿using NoteTaker.Interface;
 using System.Threading.Tasks;
-using NoteTaker.Interface;
 using Xamarin.Forms;
 
 namespace NoteTaker

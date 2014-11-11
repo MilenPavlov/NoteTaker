@@ -42,7 +42,6 @@
     <Compile Include="Note.cs" />
     <Compile Include="NoteFolder.cs" />
     <Compile Include="NotePage.cs" />
-    <Compile Include="NoteTaker1Page.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

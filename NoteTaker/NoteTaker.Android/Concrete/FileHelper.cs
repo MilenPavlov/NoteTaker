@@ -1,9 +1,9 @@
+using NoteTaker.Interface;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using NoteTaker.Interface;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(NoteTaker.Droid.Concrete.FileHelper))]

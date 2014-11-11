@@ -1,5 +1,5 @@
-using System;
 using NoteTaker.Interface;
+using System;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(NoteTaker.Droid.Concrete.LifecycleHelper))]
